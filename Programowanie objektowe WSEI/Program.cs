@@ -60,6 +60,19 @@ namespace lab_1
             {
                 Console.WriteLine(p.ToString());
             }
+            Student[] persons =
+            {
+                new Student("Kowalska", "Anna", 4),
+                 new Student("Iksinski", "Jan", 3),
+                  new Student("Iksinski", "Marek", 2),
+                   new Student("Iksinski", "Marek", 3)
+            };
+            Console.WriteLine("sort student");
+            Array.Sort(persons);
+            foreach (var p in persons)
+            {
+                Console.WriteLine(p.ToString());
+            }
         }
     }
 
@@ -234,6 +247,34 @@ namespace lab_1
         }
     }
 
+
+
+    public class Student : IComparable<Student>
+    {
+        public string Surname { get; set; }
+        public string Name { get; set; }
+        public decimal Average { get; set; }
+
+        public Student(string surname, string name, decimal average)
+        {
+            Surname = surname;
+            Name = name;
+            Average = average;
+        }
+
+        public int CompareTo(Student other)
+        {
+            var surnameResult = Surname.CompareTo(other.Surname);
+            if (surnameResult != 0) return surnameResult;
+            var nameResult = Name.CompareTo(other.Name);
+            if (nameResult != 0) return nameResult;
+            return Average.CompareTo(other.Average);
+        }
+        public override string ToString()
+        {
+            return $"Student: {Surname} {Name} {Average}";
+        }
+    }
 }
 
 // Do zrobienia cw 10, metody rozszerzajace, stan
