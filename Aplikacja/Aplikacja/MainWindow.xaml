@@ -16,6 +16,7 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBox x:Name="InputAmount"
          Grid.Row="1"
@@ -53,5 +54,29 @@
         </Button>
         <ComboBox x:Name="OutputCurrency" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" SelectionChanged="ComboBox_SelectionChanged" Height="125" Width="246" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
         <ComboBox x:Name="InputCurrency" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Height="125" Width="246" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" SelectionChanged="InputCurrency_SelectionChanged"/>
+        <Button
+            Grid.Column="0"
+            Grid.Row= "3"
+            Margin="10"
+            FontSize="24"
+            x:Name="LoadFileButton" Click="LoadFileButton_Click">
+            Wczytaj z pliku
+        </Button>
+        <Button
+            Grid.Column="2"
+            Grid.Row= "3"
+            Margin="10"
+            FontSize="24"
+            x:Name="SaveFileJsonButton" Click="SaveFileJson">
+            Zapisz do pliku JSON
+        </Button>
+        <Button
+            Grid.Column="1"
+            Grid.Row= "3"
+            Margin="10"
+            FontSize="24"
+            x:Name="OpenFileJsonButton" Click="OpenFileJson">
+            Odczyt z pliku JSON
+        </Button>
     </Grid>
 </Window>
