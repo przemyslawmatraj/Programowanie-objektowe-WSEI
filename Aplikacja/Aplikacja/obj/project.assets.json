@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\przemyslaw.matraj\\Source\\Repos\\Programowanie-objektowe-WSEI\\Aplikacja\\Aplikacja\\Aplikacja.csproj",
+      "projectUniqueName": "D:\\Users\\przemyslaw.matraj\\Source\\Repos\\Programowanie-objektowe-WSEIasdasd\\Aplikacja\\Aplikacja\\Aplikacja.csproj",
       "projectName": "Aplikacja",
-      "projectPath": "D:\\Users\\przemyslaw.matraj\\Source\\Repos\\Programowanie-objektowe-WSEI\\Aplikacja\\Aplikacja\\Aplikacja.csproj",
+      "projectPath": "D:\\Users\\przemyslaw.matraj\\Source\\Repos\\Programowanie-objektowe-WSEIasdasd\\Aplikacja\\Aplikacja\\Aplikacja.csproj",
       "packagesPath": "D:\\Users\\przemyslaw.matraj\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\przemyslaw.matraj\\Source\\Repos\\Programowanie-objektowe-WSEI\\Aplikacja\\Aplikacja\\obj\\",
+      "outputPath": "D:\\Users\\przemyslaw.matraj\\Source\\Repos\\Programowanie-objektowe-WSEIasdasd\\Aplikacja\\Aplikacja\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

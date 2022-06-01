@@ -37,7 +37,7 @@
             Grid.Row="2"
             Grid.ColumnSpan="3"
             Margin="10,10,10,10" Click="CalcResult"
-            
+            x:Name="CalcBtn"
            >
             <StackPanel
                 Orientation="Vertical">

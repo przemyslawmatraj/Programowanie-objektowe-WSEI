@@ -105,12 +105,33 @@ namespace Aplikacja
         public MainWindow()
         {
             InitializeComponent();
-            DownloadJsonData();
-            UpdateGui();
+            Task.Run(() =>
+            {
+                try
+                {
+                    DownloadJsonData();
+                    //wykonanie zmian w UI  w watku glownym
+                    Application.Current.Dispatcher.Invoke(() => {
+                        UpdateGui();
+                     });
+                }
+                catch (WebException e)
+                {
+                    MessageBox.Show("Bład połączenia", "");
+                    //wykonanie zmian w UI w watko glownym - dispatcher elementu UI
+                    CalcBtn.Dispatcher.Invoke(() => IsEnabled = false);
+                }
+                catch (JsonException e)
+                {
+                    MessageBox.Show("Bład formatu danych", "");
+                    CalcBtn.IsEnabled = false;
+                }
+            });
         }
 
         private void UpdateGui()
         {
+            CalcBtn.IsEnabled = true;
             InputCurrency.Items.Clear();
             OutputCurrency.Items.Clear();
             foreach (var code in Rates.Keys)
